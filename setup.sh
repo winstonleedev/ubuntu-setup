@@ -27,20 +27,19 @@ sudo apt install -y \
   whois \
   zsh
 
-sudo snap install \
-  android-studio            \
-  canonical-livepatch       \
-  chromium                  \
-  clion                     \
-  intellij-idea-ultimate    \
-  mailspring                \
-  onlyoffice-desktopeditors \
-  p3x-onenote               \
-  slack                     \
-  snap-store                \
-  spotify                   \
-  termius-app               \
-  wallpaperdownloader       \
+sudo snap install android-studio
+sudo snap install canonical-livepatch      
+sudo snap install chromium                 
+sudo snap install clion                    
+sudo snap install intellij-idea-ultimate   
+sudo snap install mailspring               
+sudo snap install onlyoffice-desktopeditors
+sudo snap install p3x-onenote              
+sudo snap install slack                    
+sudo snap install snap-store               
+sudo snap install spotify                  
+sudo snap install termius-app              
+sudo snap install wallpaperdownloader      
 
 mkdir ~/Setup
 cd ~/Setup
