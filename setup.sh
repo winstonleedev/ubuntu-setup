@@ -27,16 +27,14 @@ sudo apt install -y \
   whois \
   zsh
 
-sudo snap install android-studio
-sudo snap install canonical-livepatch      
+sudo snap install --classic android-studio
 sudo snap install chromium                 
-sudo snap install clion                    
-sudo snap install intellij-idea-ultimate   
+sudo snap install --classic clion                    
+sudo snap install --classic intellij-idea-ultimate   
 sudo snap install mailspring               
 sudo snap install onlyoffice-desktopeditors
 sudo snap install p3x-onenote              
-sudo snap install slack                    
-sudo snap install snap-store               
+sudo snap install --classic slack                                   
 sudo snap install spotify                  
 sudo snap install termius-app              
 sudo snap install wallpaperdownloader      
@@ -53,9 +51,6 @@ sudo apt install -y virtualbox-6.0
 curl -fsSL https://www.gnome-look.org/p/1136805/startdownload?file_id=1530774600&file_name=ocs-url_3.1.0-0ubuntu1_amd64.deb&file_type=application/x-debian-package&file_size=54502 -o ocs-url_3.1.0-0ubuntu1_amd64.deb
 sudo apt install -y libqt5svg5 qml-module-qtquick-controls
 sudo dpkg -i ocs-url_3.1.0-0ubuntu1_amd64.deb
-
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-chsh -s /bin/zsh
 
 curl -fsSL https://get.docker.com -o get-docker.sh
 sudo sh get-docker.sh
@@ -83,3 +78,5 @@ dconf load / < saved_settings.dconf
 
 sudo apt autoclean
 sudo apt autoremove
+
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
