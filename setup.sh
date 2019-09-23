@@ -49,10 +49,10 @@ wget -q https://www.virtualbox.org/download/oracle_vbox_2016.asc -O- | sudo apt-
 wget -q https://www.virtualbox.org/download/oracle_vbox.asc -O- | sudo apt-key add -
 sudo add-apt-repository "deb http://download.virtualbox.org/virtualbox/debian bionic contrib"
 sudo apt update
-sudo apt install virtualbox-6.0
+sudo apt install -y virtualbox-6.0
 
 wget https://www.gnome-look.org/p/1136805/startdownload?file_id=1530774600&file_name=ocs-url_3.1.0-0ubuntu1_amd64.deb&file_type=application/x-debian-package&file_size=54502
-sudo apt install libqt5svg5 qml-module-qtquick-controls
+sudo apt install -y libqt5svg5 qml-module-qtquick-controls
 sudo dpkg -i ocs-url_3.1.0-0ubuntu1_amd64.deb
 
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
@@ -63,9 +63,21 @@ sudo sh get-docker.sh
 sudo usermod -aG docker "$USER"
 
 sudo apt update
-sudo apt install python3-dev python3-pip python3-setuptools
+sudo apt install -y python3-dev python3-pip python3-setuptools
 sudo pip3 install thefuck
 echo "eval $(thefuck --alias)" >> ~/.zshrc
+
+git clone https://github.com/powerline/fonts.git
+cd fonts
+./install.sh
+cd ..
+
+mkdir font-hack
+cd font-hack
+wget https://github.com/source-foundry/Hack/releases/download/v3.003/Hack-v3.003-ttf.zip
+unzip "*.zip" "*.ttf" "*.otf" -d ${HOME}/.fonts
+sudo fc-cache -f -v
+cd ..
 
 wget https://raw.githubusercontent.com/thanhphu/ubuntu-ansible-playbook/master/saved_settings.dconf
 dconf load / < saved_settings.dconf
