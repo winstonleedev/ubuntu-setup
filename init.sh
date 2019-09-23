@@ -1,1 +1,0 @@
-sudo apt install git ansible net-tools
