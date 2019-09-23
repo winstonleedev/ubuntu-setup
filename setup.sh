@@ -62,6 +62,11 @@ curl -fsSL https://get.docker.com -o get-docker.sh
 sudo sh get-docker.sh
 sudo usermod -aG docker "$USER"
 
+sudo apt update
+sudo apt install python3-dev python3-pip python3-setuptools
+sudo pip3 install thefuck
+echo "eval $(thefuck --alias)" >> ~/.zshrc
+
 wget https://raw.githubusercontent.com/thanhphu/ubuntu-ansible-playbook/master/saved_settings.dconf
 dconf load / < saved_settings.dconf
 
