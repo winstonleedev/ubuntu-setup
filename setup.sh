@@ -50,7 +50,7 @@ sudo add-apt-repository "deb http://download.virtualbox.org/virtualbox/debian bi
 sudo apt update
 sudo apt install -y virtualbox-6.0
 
-wget https://www.gnome-look.org/p/1136805/startdownload?file_id=1530774600&file_name=ocs-url_3.1.0-0ubuntu1_amd64.deb&file_type=application/x-debian-package&file_size=54502
+curl -fsSL https://www.gnome-look.org/p/1136805/startdownload?file_id=1530774600&file_name=ocs-url_3.1.0-0ubuntu1_amd64.deb&file_type=application/x-debian-package&file_size=54502 -o ocs-url_3.1.0-0ubuntu1_amd64.deb
 sudo apt install -y libqt5svg5 qml-module-qtquick-controls
 sudo dpkg -i ocs-url_3.1.0-0ubuntu1_amd64.deb
 
