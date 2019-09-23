@@ -42,6 +42,15 @@ sudo snap install wallpaperdownloader
 mkdir ~/Setup
 cd ~/Setup
 
+wget https://gist.githubusercontent.com/thanhphu/b8dfde2cd16902c49dc249f4dfbfb4f8/raw/016e601d67d60810371c3be1b611bcf63451d067/unikey.xml
+sudo cp unikey.xml /usr/share/ibus/component/
+
+git clone https://github.com/ZeptByteS/dvorak-qwerty.git
+cd dvorak-qwerty
+chmod +x install.sh
+./install.sh
+cd ..
+
 wget -q https://www.virtualbox.org/download/oracle_vbox_2016.asc -O- | sudo apt-key add -
 wget -q https://www.virtualbox.org/download/oracle_vbox.asc -O- | sudo apt-key add -
 sudo add-apt-repository "deb http://download.virtualbox.org/virtualbox/debian bionic contrib"
