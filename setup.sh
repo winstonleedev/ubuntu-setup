@@ -21,11 +21,9 @@ sudo apt install -y \
   ibus-hangul \
   ibus-unikey \
   language-pack-gnome-ko \
-  ocs-url \
   python3-dev \
   python3-pip \
   python3-setuptools \
-  virtualbox-6.0 \
   whois \
   zsh
 
@@ -46,6 +44,16 @@ sudo snap install \
 
 mkdir ~/Setup
 cd ~/Setup
+
+wget -q https://www.virtualbox.org/download/oracle_vbox_2016.asc -O- | sudo apt-key add -
+wget -q https://www.virtualbox.org/download/oracle_vbox.asc -O- | sudo apt-key add -
+sudo add-apt-repository "deb http://download.virtualbox.org/virtualbox/debian bionic contrib"
+sudo apt update
+sudo apt install virtualbox-6.0
+
+wget https://www.gnome-look.org/p/1136805/startdownload?file_id=1530774600&file_name=ocs-url_3.1.0-0ubuntu1_amd64.deb&file_type=application/x-debian-package&file_size=54502
+sudo apt install libqt5svg5 qml-module-qtquick-controls
+sudo dpkg -i ocs-url_3.1.0-0ubuntu1_amd64.deb
 
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 chsh -s /bin/zsh
