@@ -33,7 +33,7 @@ sudo snap install --classic clion
 sudo snap install --classic intellij-idea-ultimate   
 sudo snap install mailspring                                                               
 sudo snap install termius-app       
-sudo snap install code           
+sudo snap install --classic code           
 sudo snap install angstrom
 
 sudo apt install -y flatpak gnome-software-plugin-flatpak
@@ -106,9 +106,9 @@ sudo apt -y autoremove
 cd ..
 
 dconf load / < dconf-settings.dconf
-cp -y .zshrc ~/
-cp -y settings.json ~/.config/Code/User/
-cp -y keybindings.json ~/.config/Code/User/
+cp -f .zshrc ~/
+cp -f settings.json ~/.config/Code/User/
+cp -f keybindings.json ~/.config/Code/User/
 
 git config --global user.name "Thanh Phu"
 git config --global user.email "git@thanhphu.net"
