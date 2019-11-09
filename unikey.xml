@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- filename: unikey.xml -->
+<component>
+	<name>org.freedesktop.IBus.Unikey</name>
+	<description>Unikey Component</description>
+	<exec>/usr/lib/ibus/ibus-engine-unikey --ibus</exec>
+	<version>0.6.1</version>
+	<author>Lê Quốc Tuấn &lt;mr.lequoctuan@gmail.com&gt;</author>
+	<license>GPL</license>
+	<homepage>http://code.google.com/p/ibus-unikey</homepage>
+	<textdomain>ibus-unikey</textdomain>
+
+	<engines>
+        <engine>
+            <name>Unikey</name>
+            <longname>Unikey</longname>
+            <description>Vietnamese Input Method Engine for IBus using Unikey Engine
+Usage:
+  - Choose input method, output charset, options in language bar.
+  - There are 4 input methods: Telex, Vni, STelex (simple telex) and STelex2 (which same as STelex, the difference is it use w as ư).
+  - And 7 output charsets: Unicode (UTF-8), TCVN3, VNI Win, VIQR, CString, NCR Decimal and NCR Hex.
+  - Use &lt;Shift&gt;+&lt;Space&gt; or &lt;Shift&gt;+&lt;Shift&gt; to restore keystrokes.
+  - Use &lt;Control&gt; to commit a word.</description>
+            <language>vi</language>
+            <license>GPLv3</license>
+            <author>Lê Quốc Tuấn &lt;mr.lequoctuan@gmail.com&gt;</author>
+            <icon>/usr/share/ibus-unikey/icons/ibus-unikey.png</icon>
+            <layout>default</layout>
+            <layout_variant></layout_variant>
+            <layout_option></layout_option>
+            <hotkeys></hotkeys>
+            <symbol></symbol>
+            <setup></setup>
+            <version></version>
+            <textdomain></textdomain>
+            <icon_prop_key></icon_prop_key>
+            <rank>99</rank>
+        </engine>
+</engines>
+
+
+</component>
