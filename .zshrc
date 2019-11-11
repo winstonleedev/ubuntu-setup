@@ -103,3 +103,5 @@ if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
 fi
 
 eval $(thefuck --alias)
+
+alias flushdns="sudo systemd-resolve --flush-caches"
