@@ -29,13 +29,6 @@ sudo apt install -y \
   zsh \
   dkms
 
-firefox https://extensions.gnome.org/extension/1080/transparent-notification/
-firefox https://www.gnome-look.org/p/1136805/
-firefox https://extensions.gnome.org/extension/307/dash-to-dock/
-firefox https://extensions.gnome.org/extension/1099/transparent-gnome-panel/
-firefox https://extensions.gnome.org/extension/1446/transparent-window-moving/
-firefox https://extensions.gnome.org/extension/1080/transparent-notification/
-
 sudo snap install chromium
 sudo snap install --classic clion
 sudo snap install --classic intellij-idea-ultimate
@@ -103,15 +96,34 @@ unzip "*.zip" "*.ttf" -d ${HOME}/.fonts
 sudo fc-cache -f -v
 cd ..
 
-firefox https://github.com/TheAssassin/AppImageLauncher/releases
-
 sudo apt autoclean
 sudo apt -y autoremove
 
 cd ..
 
+sudo apt install -y appimagelauncher_2.0.3-travis888.4f7bc8e.bionic_amd64.deb
+sudo apt install -y ocs-url_3.1.0-0ubuntu1_amd64.deb
+
+firefox https://extensions.gnome.org/extension/1080/transparent-notification/
+firefox https://extensions.gnome.org/extension/307/dash-to-dock/
+firefox https://extensions.gnome.org/extension/1099/transparent-gnome-panel/
+firefox https://extensions.gnome.org/extension/1446/transparent-window-moving/
+firefox https://extensions.gnome.org/extension/1080/transparent-notification/
+firefox https://extensions.gnome.org/extension/1471/tint-all/
+firefox https://extensions.gnome.org/extension/19/user-themes/
+firefox https://extensions.gnome.org/extension/1287/unite/
+
+mkdir ~/Pictures/wallpapers
+cp Wallpapers/*.* ~/Pictures/wallpapers/
+
+mkdir capitaine
+tar -xf capitaine-cursors-r3.tar.gz
+mv cursors capitaine/
+mv index.theme capitaine/
+sudo mv capitaine /usr/share/icons/
+
 dconf load / < dconf-settings.conf
-ln -s /etc/profile.d/vte-2.91.sh /etc/profile.d/vte.sh
+sudo ln -s /etc/profile.d/vte-2.91.sh /etc/profile.d/vte.sh
 cp -f .zshrc ~/
 cp -f settings.json ~/.config/Code/User/
 cp -f keybindings.json ~/.config/Code/User/
