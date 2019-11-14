@@ -29,6 +29,8 @@ sudo apt install -y \
   zsh \
   dkms
 
+sudo apt install ubuntu-restricted-extras
+
 sudo snap install chromium
 sudo snap install --classic clion
 sudo snap install --classic intellij-idea-ultimate
@@ -53,15 +55,15 @@ sudo add-apt-repository ppa:bamboo-engine/ibus-bamboo -y
 sudo apt-get update
 sudo apt-get install ibus-bamboo
 
-sudo cp ../unikey.xml /usr/share/ibus/component/
-sudo cp ../bamboo.xml /usr/share/ibus/component/
-
 git clone https://github.com/ZeptByteS/dvorak-qwerty.git
 cd dvorak-qwerty
 git checkout develop
 chmod +x install.sh
 sudo ./install.sh
 cd ..
+
+sudo cp ../unikey.xml /usr/share/ibus/component/
+sudo cp ../bamboo.xml /usr/share/ibus/component/
 
 ibus-daemon &
 
@@ -71,9 +73,7 @@ sudo add-apt-repository "deb http://download.virtualbox.org/virtualbox/debian bi
 sudo apt update
 sudo apt install -y virtualbox-6.0
 
-curl -fsSL https://www.gnome-look.org/p/1136805/startdownload?file_id=1530774600&file_name=ocs-url_3.1.0-0ubuntu1_amd64.deb&file_type=application/x-debian-package&file_size=54502 -o ocs-url_3.1.0-0ubuntu1_amd64.deb
 sudo apt install -y libqt5svg5 qml-module-qtquick-controls
-sudo dpkg -i ocs-url_3.1.0-0ubuntu1_amd64.deb
 
 curl -fsSL https://get.docker.com -o get-docker.sh
 sudo sh get-docker.sh
