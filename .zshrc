@@ -8,7 +8,7 @@ export ZSH="/home/thanhphu/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="robbyrussell"
+ZSH_THEME="agnoster"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -103,5 +103,12 @@ if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
 fi
 
 eval $(thefuck --alias)
+
+prompt_context() {
+  # Custom (Random emoji)
+  emojis=("🔥" "👑" "😎" "🐸" "🐵" "🦄" "🌈" "🍻" "🚀" "💡" "🎉" "🔑" "🌙")
+  RAND_EMOJI_N=$(( $RANDOM % ${#emojis[@]} + 1))
+  prompt_segment black default "${emojis[$RAND_EMOJI_N]} "
+}
 
 alias flushdns="sudo systemd-resolve --flush-caches"
