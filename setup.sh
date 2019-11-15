@@ -39,6 +39,8 @@ sudo snap install termius-app
 sudo snap install --classic code
 sudo snap install angstrom
 sudo snap install tilix
+sudo snap install --classic go
+sudo snap install --edge --classic node
 
 sudo apt install -y flatpak gnome-software-plugin-flatpak
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
@@ -78,6 +80,9 @@ sudo apt install -y libqt5svg5 qml-module-qtquick-controls
 curl -fsSL https://get.docker.com -o get-docker.sh
 sudo sh get-docker.sh
 sudo usermod -aG docker "$USER"
+
+sudo cp docker-credential-secretservice /usr/local/bin
+cp config.json ~/.docker/
 
 sudo apt update
 sudo apt install -y python3-dev python3-pip python3-setuptools
