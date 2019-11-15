@@ -29,8 +29,6 @@ sudo apt install -y \
   zsh \
   dkms
 
-sudo apt install ubuntu-restricted-extras
-
 sudo snap install chromium
 sudo snap install --classic clion
 sudo snap install --classic intellij-idea-ultimate
@@ -137,3 +135,5 @@ git config --global user.name "Thanh Phu"
 git config --global user.email "git@thanhphu.net"
 
 echo y | sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+
+sudo apt install ubuntu-restricted-extras
