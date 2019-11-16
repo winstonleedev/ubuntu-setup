@@ -27,7 +27,8 @@ sudo apt install -y \
   python3-setuptools \
   whois \
   zsh \
-  dkms
+  dkms \
+  filezilla
 
 sudo apt install ubuntu-restricted-extras
 
@@ -47,7 +48,6 @@ flatpak install -y flathub com.github.PintaProject.Pinta
 flatpak install -y flathub com.slack.Slack
 flatpak install -y flathub com.spotify.Client
 flatpak install -y flathub nl.hjdskes.gcolor3
-flatpak install -y org.filezillaproject.Filezilla
 
 mkdir Setup
 cd Setup
