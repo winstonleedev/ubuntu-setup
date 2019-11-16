@@ -35,7 +35,9 @@
             <license>GPLv3</license>
             <author>Luong Thanh Lam &lt;ltlam93@gmail.com&gt;</author>
             <icon>/usr/share/ibus-bamboo/viet-on.png</icon>
-            <layout>default</layout>
+            <layout>us</layout>
+            <layout_variant>dvq-simplified</layout_variant>
+            <layout_option></layout_option>
             <longname>Bamboo</longname>
             <description>Vietnamese input engine for IBus</description>
             <rank>0</rank>

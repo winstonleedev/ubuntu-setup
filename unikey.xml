@@ -25,8 +25,8 @@ Usage:
             <license>GPLv3</license>
             <author>Lê Quốc Tuấn &lt;mr.lequoctuan@gmail.com&gt;</author>
             <icon>/usr/share/ibus-unikey/icons/ibus-unikey.png</icon>
-            <layout>default</layout>
-            <layout_variant></layout_variant>
+            <layout>us</layout>
+            <layout_variant>dvq-simplified</layout_variant>
             <layout_option></layout_option>
             <hotkeys></hotkeys>
             <symbol></symbol>
