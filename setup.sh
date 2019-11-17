@@ -1,3 +1,6 @@
+# Install ssh keys and chmod to 700 
+# Check out this code
+
 sudo apt update
 sudo apt upgrade
 sudo apt install -y \
@@ -6,8 +9,6 @@ sudo apt install -y \
   net-tools \
   curl \
   wget \
-  build-essential \
-  net-tools \
   apt-transport-https \
   build-essential \
   chrome-gnome-shell \
@@ -83,8 +84,6 @@ sudo usermod -aG docker "$USER"
 sudo cp docker-credential-secretservice /usr/local/bin
 cp config.json ~/.docker/
 
-sudo apt update
-sudo apt install -y python3-dev python3-pip python3-setuptools
 sudo pip3 install thefuck
 echo "eval $(thefuck --alias)" >> ~/.zshrc
 
