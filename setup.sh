@@ -140,3 +140,7 @@ echo y | sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-m
 
 sudo apt install ubuntu-restricted-extras
 sudo ufw enable
+
+cd ~/.ssh
+ssh-add home
+ssh-add id_rsa
