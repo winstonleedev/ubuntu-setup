@@ -42,7 +42,6 @@ sudo snap install --classic code
 sudo snap install angstrom
 sudo snap install tilix
 sudo snap install --classic go
-sudo snap install --edge --classic node
 
 sudo apt install -y flatpak gnome-software-plugin-flatpak
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
@@ -54,6 +53,9 @@ flatpak install -y flathub nl.hjdskes.gcolor3
 
 mkdir Setup
 cd Setup
+
+curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
+sudo apt-get install -y nodejs
 
 sudo add-apt-repository ppa:bamboo-engine/ibus-bamboo -y
 sudo apt-get update
