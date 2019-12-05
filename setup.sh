@@ -86,6 +86,9 @@ sudo usermod -aG docker "$USER"
 sudo cp docker-credential-secretservice /usr/local/bin
 cp config.json ~/.docker/
 
+sudo curl -L "https://github.com/docker/compose/releases/download/1.25.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+sudo chmod +x /usr/local/bin/docker-compose
+
 sudo pip3 install thefuck
 echo "eval $(thefuck --alias)" >> ~/.zshrc
 
