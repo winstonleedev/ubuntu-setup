@@ -137,7 +137,7 @@ firefox https://extensions.gnome.org/extension/1471/tint-all/
 firefox https://extensions.gnome.org/extension/19/user-themes/
 firefox https://extensions.gnome.org/extension/1287/unite/
 
-mkdir ~/Pictures/wallpapers
+mkdir ~/Pictures/Wallpapers
 cp Wallpapers/*.* ~/Pictures/Wallpapers/
 
 mkdir capitaine
