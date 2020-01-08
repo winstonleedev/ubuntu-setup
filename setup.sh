@@ -156,6 +156,7 @@ git config --global user.name "Thanh Phu"
 git config --global user.email "git@thanhphu.net"
 
 echo y | sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+chsh -s $(which zsh)
 
 sudo apt install ubuntu-restricted-extras
 sudo ufw enable
