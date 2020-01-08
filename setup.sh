@@ -86,6 +86,8 @@ wget -q https://www.virtualbox.org/download/oracle_vbox.asc -O- | sudo apt-key a
 sudo add-apt-repository "deb http://download.virtualbox.org/virtualbox/debian bionic contrib"
 sudo apt update
 sudo apt install -y virtualbox-6.1
+wget https://download.virtualbox.org/virtualbox/6.1.0/Oracle_VM_VirtualBox_Extension_Pack-6.1.0.vbox-extpack
+sudo VBoxManage extpack install --replace Oracle_VM_VirtualBox_Extension_Pack-6.1.0.vbox-extpack
 
 sudo apt install -y libqt5svg5 qml-module-qtquick-controls
 
