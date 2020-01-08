@@ -1,10 +1,15 @@
+# mount user folder if on external drives using the disks interface, mount to /home
+
+wget https://raw.githubusercontent.com/Yubico/libu2f-host/master/70-u2f.rules
+sudo mv 70-u2f.rules /etc/udev/rules.d/
+
 # Install ssh keys and chmod to 700 
 # Check out this code
-
 sudo cp -f sources.list /etc/apt/
 
 sudo apt update
 sudo apt upgrade
+sudo apt --fix-broken install
 sudo apt install -y \
   software-properties-common \
   git \
@@ -31,10 +36,13 @@ sudo apt install -y \
   whois \
   zsh \
   dkms \
-  filezilla
+  filezilla \
+  cmake \
+  pkg-config
 
 sudo snap install chromium
 sudo snap install --classic clion
+sudo snap install --classic goland
 sudo snap install --classic intellij-idea-ultimate
 sudo snap install mailspring
 sudo snap install termius-app
@@ -111,8 +119,8 @@ sudo apt -y autoremove
 
 cd ..
 
-sudo apt install -y appimagelauncher_2.0.3-travis888.4f7bc8e.bionic_amd64.deb
-sudo apt install -y ocs-url_3.1.0-0ubuntu1_amd64.deb
+sudo apt install ./appimagelauncher_2.0.3-travis888.4f7bc8e.bionic_amd64.deb
+sudo apt install ./ocs-url_3.1.0-0ubuntu1_amd64.deb
 
 firefox https://extensions.gnome.org/extension/1080/transparent-notification/
 firefox https://extensions.gnome.org/extension/307/dash-to-dock/
@@ -149,3 +157,4 @@ sudo ufw enable
 cd ~/.ssh
 ssh-add home
 ssh-add id_rsa
+
