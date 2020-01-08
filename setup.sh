@@ -140,6 +140,8 @@ mv cursors capitaine/
 mv index.theme capitaine/
 sudo mv capitaine /usr/share/icons/
 
+sudo cp Hotspot /etc/NetworkManager/system-connections/
+
 dconf load / < dconf-settings.conf
 sudo ln -s /etc/profile.d/vte-2.91.sh /etc/profile.d/vte.sh
 cp -f .zshrc ~/
