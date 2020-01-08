@@ -114,6 +114,10 @@ unzip "*.zip" "*.ttf" -d ${HOME}/.fonts
 sudo fc-cache -f -v
 cd ..
 
+wget https://github.com/getferdi/ferdi/releases/download/v5.4.0/ferdi_5.4.0_amd64.deb
+sudo apt install ./ferdi_5.4.0_amd64.deb
+
+
 sudo apt autoclean
 sudo apt -y autoremove
 
