@@ -132,7 +132,7 @@ firefox https://extensions.gnome.org/extension/19/user-themes/
 firefox https://extensions.gnome.org/extension/1287/unite/
 
 mkdir ~/Pictures/wallpapers
-cp Wallpapers/*.* ~/Pictures/wallpapers/
+cp Wallpapers/*.* ~/Pictures/Wallpapers/
 
 mkdir capitaine
 tar -xf capitaine-cursors-r3.tar.gz
