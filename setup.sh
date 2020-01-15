@@ -20,11 +20,9 @@ sudo apt install -y \
   build-essential \
   chrome-gnome-shell \
   cpu-checker \
-  curl \
   firefox-locale-ko \
   fonts-firacode \
   fonts-noto-cjk-extra \
-  git \
   gnome-tweaks \
   gnupg-agent \
   ibus-hangul \
@@ -128,7 +126,9 @@ sudo apt install ./appimagelauncher_2.0.3-travis888.4f7bc8e.bionic_amd64.deb
 sudo apt install ./ocs-url_3.1.0-0ubuntu1_amd64.deb
 sudo apt --fix-broken install ./hwpviewer_9.20.0.347_amd64.deb
 
-sudo tar -C /usr/local -xzf go1.13.6.linux-amd64.tar.gz
+# sudo tar -C /usr/local -xzf go1.13.6.linux-amd64.tar.gz
+
+wget -q -O - https://raw.githubusercontent.com/canha/golang-tools-install-script/master/goinstall.sh | bash -s -- --version 1.12.15
 
 firefox https://extensions.gnome.org/extension/1080/transparent-notification/
 firefox https://extensions.gnome.org/extension/307/dash-to-dock/
@@ -156,14 +156,14 @@ cp -f .zshrc ~/
 cp -f settings.json ~/.config/Code/User/
 cp -f keybindings.json ~/.config/Code/User/
 
-echo "export PATH=$PATH:/usr/local/go/bin" >> ~/.zshrc
-echo "export GOROOT=/usr/local/go/" >> ~/.zshrc
-echo "export GOPATH=~/go/" >> ~/.zshrc
+# echo "export PATH=$PATH:/usr/local/go/bin" >> ~/.zshrc
+# echo "export GOROOT=/usr/local/go/" >> ~/.zshrc
+# echo "export GOPATH=~/go/" >> ~/.zshrc
 echo "eval $(thefuck --alias)" >> ~/.zshrc
 
-echo "export PATH=$PATH:/usr/local/go/bin" >> ~/.profile
-echo "export GOROOT=/usr/local/go/" >> ~/.profile
-echo "export GOPATH=~/go/" >> ~/.profile
+# echo "export PATH=$PATH:/usr/local/go/bin" >> ~/.profile
+# echo "export GOROOT=/usr/local/go/" >> ~/.profile
+# echo "export GOPATH=~/go/" >> ~/.profile
 
 git config --global user.name "Thanh Phu"
 git config --global user.email "git@thanhphu.net"
