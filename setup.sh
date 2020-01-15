@@ -102,7 +102,6 @@ sudo curl -L "https://github.com/docker/compose/releases/download/1.25.0/docker-
 sudo chmod +x /usr/local/bin/docker-compose
 
 sudo pip3 install thefuck
-echo "eval $(thefuck --alias)" >> ~/.zshrc
 
 git clone https://github.com/powerline/fonts.git
 cd fonts
@@ -127,6 +126,9 @@ cd ..
 
 sudo apt install ./appimagelauncher_2.0.3-travis888.4f7bc8e.bionic_amd64.deb
 sudo apt install ./ocs-url_3.1.0-0ubuntu1_amd64.deb
+sudo apt --fix-broken install ./hwpviewer_9.20.0.347_amd64.deb
+
+sudo tar -C /usr/local -xzf go1.13.6.linux-amd64.tar.gz
 
 firefox https://extensions.gnome.org/extension/1080/transparent-notification/
 firefox https://extensions.gnome.org/extension/307/dash-to-dock/
@@ -153,6 +155,15 @@ sudo ln -s /etc/profile.d/vte-2.91.sh /etc/profile.d/vte.sh
 cp -f .zshrc ~/
 cp -f settings.json ~/.config/Code/User/
 cp -f keybindings.json ~/.config/Code/User/
+
+echo "export PATH=$PATH:/usr/local/go/bin" >> ~/.zshrc
+echo "export GOROOT=/usr/local/go/" >> ~/.zshrc
+echo "export GOPATH=~/go/" >> ~/.zshrc
+echo "eval $(thefuck --alias)" >> ~/.zshrc
+
+echo "export PATH=$PATH:/usr/local/go/bin" >> ~/.profile
+echo "export GOROOT=/usr/local/go/" >> ~/.profile
+echo "export GOPATH=~/go/" >> ~/.profile
 
 git config --global user.name "Thanh Phu"
 git config --global user.email "git@thanhphu.net"
