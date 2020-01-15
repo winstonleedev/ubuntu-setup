@@ -120,11 +120,14 @@ sudo apt install ./ferdi_5.4.0_amd64.deb
 sudo apt autoclean
 sudo apt -y autoremove
 
+wget https://cdn.hancom.com/pds/hnc/VIE/hwpviewer_9.20.0.347_amd64.deb
+sudo apt --fix-broken install ./hwpviewer_9.20.0.347_amd64.deb
+
 cd ..
 
 sudo apt install ./appimagelauncher_2.0.3-travis888.4f7bc8e.bionic_amd64.deb
 sudo apt install ./ocs-url_3.1.0-0ubuntu1_amd64.deb
-sudo apt --fix-broken install ./hwpviewer_9.20.0.347_amd64.deb
+
 
 # sudo tar -C /usr/local -xzf go1.13.6.linux-amd64.tar.gz
 
