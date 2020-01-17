@@ -174,6 +174,10 @@ git config --global user.email "git@thanhphu.net"
 echo y | sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 chsh -s $(which zsh)
 
+# watch limit for IDEs
+sudo echo "fs.inotify.max_user_watches = 524288" >> /etc/sysctl.conf
+sudo sysctl -p --system
+
 sudo apt install ubuntu-restricted-extras
 sudo ufw enable
 
