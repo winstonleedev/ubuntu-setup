@@ -36,7 +36,8 @@ sudo apt install -y \
   dkms \
   filezilla \
   cmake \
-  pkg-config
+  pkg-config \
+  pavucontrol
 
 sudo snap install chromium
 sudo snap install --classic clion
