@@ -112,3 +112,8 @@ prompt_context() {
 }
 
 alias flushdns="sudo systemd-resolve --flush-caches"
+alias bfg="java -jar ~/Applications/bfg.jar"
+
+export GOROOT=/usr/local/go/
+export GOPATH=~/go/
+export PATH=$PATH:$GOROOT/bin:$GOPATH/bin:~/.local/jdk-11.0.6/bin

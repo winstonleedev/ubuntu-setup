@@ -124,6 +124,10 @@ sudo apt -y autoremove
 wget https://cdn.hancom.com/pds/hnc/VIE/hwpviewer_9.20.0.347_amd64.deb
 sudo apt --fix-broken install ./hwpviewer_9.20.0.347_amd64.deb
 
+wget https://repo1.maven.org/maven2/com/madgag/bfg/1.13.0/bfg-1.13.0.jar
+mkdir -p ~/Applications
+mv bfg-1.13.0.jar ~/Applications/bfg.jar
+
 cd ..
 
 sudo apt install ./appimagelauncher_2.0.3-travis888.4f7bc8e.bionic_amd64.deb
