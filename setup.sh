@@ -48,6 +48,7 @@ sudo snap install termius-app
 sudo snap install --classic code
 sudo snap install angstrom
 sudo snap install tilix
+sudo snap install barrier
 sudo snap install --classic go
 
 sudo apt install -y flatpak gnome-software-plugin-flatpak
@@ -146,6 +147,7 @@ firefox https://extensions.gnome.org/extension/1080/transparent-notification/
 firefox https://extensions.gnome.org/extension/1471/tint-all/
 firefox https://extensions.gnome.org/extension/19/user-themes/
 firefox https://extensions.gnome.org/extension/1287/unite/
+firefox https://extensions.gnome.org/extension/1319/gsconnect/
 
 mkdir ~/Pictures/Wallpapers
 cp Wallpapers/*.* ~/Pictures/Wallpapers/
@@ -190,3 +192,9 @@ cd ~/.ssh
 ssh-add home
 ssh-add id_rsa
 
+# Enable KDE connect
+sudo ufw allow 1714:1764/udp
+sudo ufw allow 1714:1764/tcp
+
+# Enable barrier
+sudo ufw allow 24800
